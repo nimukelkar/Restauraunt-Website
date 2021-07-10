@@ -9,6 +9,7 @@
 
 body{
     font-family:'Mr Dafoe', cursive;
+    background:url(../images/body-3.jpg)center/cover fixed no-repeat;
     /*color:#c9c1ac;*/
 }
 
@@ -100,7 +101,7 @@ body{
 .header-link{
     display:inline-block;
     position:absolute;
-    bottom:37%;
+    bottom:41%;
     left:48%;
     background:#c9c1ac;
     border-radius: 10px;
@@ -110,7 +111,7 @@ body{
     animation-iteration-count: infinite;
 }
 .header-link:hover{
-    color:#242424;
+    color:black;
 }
 @keyframes fromBottom{
     0%{
@@ -123,5 +124,53 @@ body{
         transform:translateY(-10px);
     }
 }
+/*Menu items*/
+.item-container{
+    position:relative;
+    /*for the link*/
+    overflow:hidden;
+    /*background:linear-gradient(rgb(0,0,0),rgb(0,0,0));*/
+    transition:all 2s ease;
+
+
+}
+.item-image{
+    transition:all 2s ease;
+
+}
+.item-container:hover .item-img{
+    transform:scale(1.2); /*After hovering image will scale*/
+    opacity:0.5;
+
+}
+.item-link{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:#d3325f;
+    font-size:2 rem;
+    border-top:3px solid #d3325f;
+    border-bottom:3px solid #d3325f;
+    transition:all 2s ease; /*Turns pink after 2 s of hovering*/
+    opacity:0;/* Link disapperas after cursor moves away*/
+
+
+}
+.item-container:hover .item-link{
+    opacity:1;
+
+}
+.item-link:hover{
+    color:#c9c1ac;
+    border:3px solid #c9c1ac;
+    background:#c9c1ac;
+    color: #242424;
+}
+.item-container:hover{
+    outline:10 px solid #d3325f;
+    outline-offset: -1.8 rem;
+}
+
 
 
